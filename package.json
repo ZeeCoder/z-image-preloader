@@ -1,0 +1,33 @@
+{
+  "name": "z-image-preloader",
+  "version": "0.1.0",
+  "description": "An image preloader solution utilizing Kriskowal's Q Promise library.",
+  "main": "image-preloader.js",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "q": "^1.3.0"
+  },
+  "devDependencies": {
+    "clone": "^1.0.2",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZeeCoder/z-image-preloader.git"
+  },
+  "keywords": [
+    "q",
+    "promise",
+    "image",
+    "preloader"
+  ],
+  "author": "Hubert Viktor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZeeCoder/z-image-preloader/issues"
+  },
+  "homepage": "https://github.com/ZeeCoder/z-image-preloader#readme"
+}

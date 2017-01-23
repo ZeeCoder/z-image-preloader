@@ -30,4 +30,4 @@ promise.then(function() {
 
 # [LICENSE (MIT)](LICENSE)
 
-# [CHANGELOG](CHANGELOG)
+# [CHANGELOG](CHANGELOG.md)

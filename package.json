@@ -1,11 +1,8 @@
 {
   "name": "z-image-preloader",
-  "version": "1.0.0",
-  "description": "An image preloader solution based on Promises/A+",
+  "version": "2.0.0",
+  "description": "A Promise-based image preloader solution.",
   "main": "image-preloader.js",
-  "dependencies": {
-    "bluebird": "^3.3.4"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ZeeCoder/z-image-preloader.git"

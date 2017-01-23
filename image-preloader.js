@@ -1,13 +1,11 @@
 'use strict';
 
-var Promise = require('bluebird');
-
 module.exports = {
     /**
-     * @param {String|Array} data Url string or array of strings.
+     * @param {String|String[]} data Url string or array of strings.
      * @returns {Promise}
      */
-    load: function(data) {
+    batchLoad: function(data) {
         // Converting a single element to an array.
         if (Array.isArray(data) === false) {
             data = [data];
@@ -17,7 +15,7 @@ module.exports = {
         data = data.map(function(str) {
             // Maybe there's a better solution to implement a "settle" functionality for es6 promises?
             return new Promise(function(resolve) {
-                this.getPromise(str)
+                this.load(str)
                     .then(function(param) { resolve(param); })
                     .catch(function(param) { resolve(param); });
             }.bind(this));
@@ -31,7 +29,7 @@ module.exports = {
      * image url, or an Image DOM element.
      * @returns {Promise}
      */
-    getPromise: function(img) {
+    load: function(img) {
         return new Promise(function(resolve, reject) {
             if (
                 img instanceof HTMLImageElement === false &&
@@ -51,7 +49,7 @@ module.exports = {
             };
 
             img.onabort = img.onerror = function(err) {
-                reject(err);
+                reject(new Error(err));
             };
 
             if (typeof imgSrc !== 'undefined') {

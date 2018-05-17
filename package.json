@@ -1,6 +1,6 @@
 {
   "name": "z-image-preloader",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A Promise-based image preloader solution.",
   "main": "image-preloader.js",
   "repository": {

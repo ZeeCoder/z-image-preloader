@@ -9,13 +9,32 @@
   },
   "keywords": [
     "promise",
-    "es6",
-    "preloader"
+    "preloader",
+    "image",
+    "preload"
   ],
-  "author": "Viktor Hubert",
+  "author": {
+    "name": "Viktor Hubert",
+    "email": "rpgmorpheus@gmail.com",
+    "url": "https://hubertviktor.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ZeeCoder/z-image-preloader/issues"
   },
-  "homepage": "https://github.com/ZeeCoder/z-image-preloader#readme"
+  "homepage": "https://github.com/ZeeCoder/z-image-preloader#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.0",
+    "prettier": "^1.12.1"
+  },
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }

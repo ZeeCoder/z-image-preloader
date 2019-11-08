@@ -1,6 +1,6 @@
 {
   "name": "z-image-preloader",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A Promise-based image preloader solution.",
   "main": "image-preloader.js",
   "repository": {
@@ -23,18 +23,20 @@
     "url": "https://github.com/ZeeCoder/z-image-preloader/issues"
   },
   "homepage": "https://github.com/ZeeCoder/z-image-preloader#readme",
-  "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^7.1.0",
-    "prettier": "^1.12.1"
-  },
-  "scripts": {
-    "precommit": "lint-staged"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,md}": [
       "prettier --write",
       "git add"
     ]
+  },
+  "devDependencies": {
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.12.1"
   }
 }

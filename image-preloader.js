@@ -54,11 +54,6 @@ module.exports = {
                 img = document.createElement("img");
             }
 
-            // Cached images immediately resolve their promises.
-            if (img.complete) {
-                return resolve(img);
-            }
-
             img.onload = function() {
                 resolve(img);
             };
